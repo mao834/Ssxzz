@@ -1,0 +1,54 @@
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    overflow: hidden; /* ป้องกันการเลื่อนหน้าจอ */
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 5em; /* ทำให้ตัวหนังสือใหญ่ขึ้น */
+    font-weight: bold;
+    color: black;
+    opacity: 1;
+    transform: translateY(50px);
+    animation: fadeInUp 2s ease-out forwards, fadeOut 2s ease-out 2s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* รูปเต็มหน้าจอ */
+    height: 100vh;
+    object-fit: cover; /* ป้องกันรูปเสียสัดส่วน */
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+}
+
+audio {
+    display: none;
+}
